@@ -1,0 +1,70 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "movies")
+
+
+   public class Movie { 
+   
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "movieId")
+    private int mId;
+    
+    @Nullable
+    @ColumnInfo(name = "movieTitle")
+    private String mTitle;
+    
+    private String mCreationDate;
+    private String mStrikingScene;
+    private int mScore;
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
+
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        mCreationDate = creationDate;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(@Nullable String title) {
+        mTitle = title;
+    }
+
+    public int getScore() {
+        return mScore;
+    }
+
+    public void setScore(int score) {
+        mScore = score;
+    }
+
+    public String getStrikingScene() {
+        return mStrikingScene;
+    }
+
+    public void setStrikingScene(String strikingScene) {
+        mStrikingScene = strikingScene;
+    }
+    
+        public Movie(@Nullable int mId, String mTitle, String mStrikingScene, int mScore, String mCreationDate) {
+        mCreationDate = creationDate;
+        mTitle = title;
+        mStrikingScene = strikingScene;
+        mScore = score;
+    }
